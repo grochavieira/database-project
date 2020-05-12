@@ -1,12 +1,12 @@
 import http from "k6/http";
 import { sleep } from "k6";
 
-// export let options = {
-//     vus: 10,
-//     duration: '30s',
-//   };
+export let options = {
+  vus: 200,
+  duration: "30s",
+};
 
-export default function() {
+export default function () {
   http.get(`http://localhost:3333/images`);
   sleep(1);
 }
